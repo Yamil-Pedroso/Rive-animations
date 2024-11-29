@@ -20,3 +20,10 @@ export const BannerContainer = styled.div`
     border-radius: 10rem;
   }
 `;
+
+export const BannerWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+`;

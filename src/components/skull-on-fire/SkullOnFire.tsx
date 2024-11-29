@@ -1,21 +1,10 @@
-import { useRive } from "@rive-app/react-canvas";
 import AniCardLayout from "../../common/ani-card-layout/AniCardLayout";
+import { ani } from "../../types/Types";
 
-interface ISkullOnFireProps {
-  animationFile4: string;
-}
-
-const SkullOnFire: React.FC<ISkullOnFireProps> = ({ animationFile4 }) => {
-  const { RiveComponent } = useRive({
-    src: animationFile4,
-    autoplay: true,
-  });
+const SkullOnFire = () => {
 
   return (
-    <AniCardLayout style={{ backgroundColor: "#1a1205" }}>
-      <h3>Skull on Fire</h3>
-        <RiveComponent />
-    </AniCardLayout>
+    <AniCardLayout style={{ backgroundColor: "#1a1205" }} title="Skull On Fire" animationFile={ani[2].animationFile} />
   );
 };
 

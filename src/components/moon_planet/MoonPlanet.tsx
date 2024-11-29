@@ -1,21 +1,9 @@
-import { useRive } from "@rive-app/react-canvas";
 import AniCardLayout from "../../common/ani-card-layout/AniCardLayout";
+import { ani } from "../../types/Types";
 
-interface IMoonPlanetProps {
-  animationFile5: string;
-}
-
-const MoonPlanet: React.FC<IMoonPlanetProps> = ({ animationFile5 }) => {
-  const { RiveComponent } = useRive({
-    src: animationFile5,
-    autoplay: true,
-  });
-
+const MoonPlanet = () => {
   return (
-    <AniCardLayout style={{ backgroundColor: "#0d0d0d" }}>
-      <h3>Moon Planet</h3>
-        <RiveComponent />
-    </AniCardLayout>
+    <AniCardLayout style={{ backgroundColor: "#0d0d0d" }} title="Moon Planet" animationFile={ani[3].animationFile} />
   );
 };
 
