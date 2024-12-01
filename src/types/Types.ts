@@ -14,6 +14,6 @@ const ani: IAniProps[] = [
     { animationFile: skullFire },
     { animationFile: moonPlanet },
     { animationFile: metronome },
-]
+];
 
 export { ani }

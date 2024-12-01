@@ -1,8 +1,14 @@
 import { useState } from "react";
 import { BannerContainer, BannerWrapper } from "./banner.styles";
+import Switch from "../switch/Switch";
 import images from "../../assets";
 
-const Banner = () => {
+interface IBannerProps {
+  activeSwitch?: boolean;
+  setActiveSwitch: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Banner: React.FC<IBannerProps> = ({ activeSwitch, setActiveSwitch }) => {
   const [active, setActive] = useState(false);
   const [active2, setActive2] = useState(false);
 
@@ -50,6 +56,8 @@ const Banner = () => {
         >
           Animation Examples
         </h2>
+
+        <Switch activeSwitch={activeSwitch} setActiveSwitch={setActiveSwitch} />
       </BannerWrapper>
     </BannerContainer>
   );
