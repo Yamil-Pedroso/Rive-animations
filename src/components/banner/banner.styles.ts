@@ -2,15 +2,11 @@ import styled from 'styled-components';
 
 export const BannerContainer = styled.div`
   display: flex;
-  justify-content: center;
-    align-items: center;
   width: 100%;
-  padding: 2rem;
-  background-color: #426ab8;
+  height: 15rem;
   border-bottom: 5px solid #0b0b0b;
 
   h2 {
-    text-align: center;
     font-size: 1rem;
     color: #0b0b0b;
     margin-bottom: 1rem;
@@ -43,10 +39,9 @@ export const BannerContainer = styled.div`
 
 export const BannerWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 10rem;
+  width: 100%;
 
   .ship {
     animation: shipFloating 3s infinite;

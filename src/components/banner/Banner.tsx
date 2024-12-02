@@ -31,6 +31,18 @@ const Banner: React.FC<IBannerProps> = ({ activeSwitch, setActiveSwitch }) => {
   return (
     <BannerContainer>
       <BannerWrapper>
+      <img
+        src={images.cloud}
+        alt="cloud"
+        style={{ 
+          width: "100%", 
+          height: "15rem",
+          objectFit: "cover",
+          position: "absolute",
+          filter: "brightness(0.5)",
+          zIndex: -1,
+        }}
+      />
         <img
           className={`
             ${active ? "ship" : ""}`}
