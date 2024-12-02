@@ -32,13 +32,14 @@ const Banner: React.FC<IBannerProps> = ({ activeSwitch, setActiveSwitch }) => {
     <BannerContainer>
       <BannerWrapper>
         <img
+          className={`
+            ${active ? "ship" : ""}`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          src={images.logo}
+          src={images.ufo}
           alt="logo"
-          width="100"
+          width="200"
           style={{
-            marginBottom: "1rem",
             opacity: 0.8,
             transition: "transform 0.3s ease",
             transform: `${active ? "scale(0.6)" : "scale(1)"} ${

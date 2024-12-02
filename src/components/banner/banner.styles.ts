@@ -6,7 +6,7 @@ export const BannerContainer = styled.div`
     align-items: center;
   width: 100%;
   padding: 2rem;
-  background-color: #c4c4c4;
+  background-color: #426ab8;
   border-bottom: 5px solid #0b0b0b;
 
   h2 {
@@ -18,12 +18,49 @@ export const BannerContainer = styled.div`
     background-color: #212121;
     color: #fff;
     border-radius: 10rem;
+
+    &:hover {
+      .ship {
+        animation: shipFloating 3s infinite;
+      }
+
+      @keyframes shipFloating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+    }
+
+
   }
 `;
 
 export const BannerWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 10rem;
+
+  .ship {
+    animation: shipFloating 3s infinite;
+  }
+
+  @keyframes shipFloating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 `;

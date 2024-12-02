@@ -17,17 +17,15 @@ const App = () => {
 
   const dynamicTheme = {
     ...theme,
-    colors : {
+    colors: {
       ...theme.colors,
       primary: isDarkMode ? theme.colors.secondary : theme.colors.primary,
     },
-  }
+  };
 
   useEffect(() => {
     theme.text.primary = isDarkMode ? "black" : "supabase-text";
-
   }, [isDarkMode]);
-
 
   return (
     <ThemeProvider theme={dynamicTheme}>

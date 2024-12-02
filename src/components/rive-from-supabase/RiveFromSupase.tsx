@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import { theme } from "../../styles/theme";
 import { getRiveFiles } from "../../utils/supabaseStorage2";
 import Rive from "@rive-app/react-canvas";
-import { AnimationWrapper, RiveContainer, Content, AnimationUrl } from "./rive.styles";
+import {
+  AnimationWrapper,
+  RiveContainer,
+  Content,
+  AnimationUrl,
+} from "./rive.styles";
 
 interface IRiveFromSupabaseProps {
   isDarkMode: boolean;
@@ -28,30 +33,38 @@ const RiveFromSupabase = ({ isDarkMode }: IRiveFromSupabaseProps) => {
 
   return (
     <RiveContainer>
-      <h1
+      <div
         style={{
-          textAlign: "center",
-          margin: "2rem",
-          color: "#435a53",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "2rem",
         }}
       >
-        Galería de Animaciones from Supabase
-      </h1>
-      <AnimationWrapper style={{ display: "flex", gap: "8rem"  }}>
+        <h1
+          style={{
+            textAlign: "center",
+            margin: "2rem",
+            color: "#435a53",
+          }}
+        >
+          Galería de Animaciones
+        </h1>
+      </div>
+      <AnimationWrapper style={{ display: "flex", gap: "8rem" }}>
         {riveFiles.map((file) => (
-          <Content
-            style={{ borderRadius: isDarkMode ? "0" : "1rem", overflow: "hidden" }}
-           >
-            <h2 style={{ color: isDarkMode ? theme.colors.tertiary : "" }}
-            >{file.name}</h2>
-            <AnimationUrl
-              key={file.name}
-            >
-              <Rive src={file.url} style={{ 
-                 width: 200, 
-                 height: 200,
-                 }} 
-                 />
+          <Content>
+            <h2 style={{ color: isDarkMode ? theme.colors.tertiary : "" }}>
+              {file.name}
+            </h2>
+            <AnimationUrl key={file.name}>
+              <Rive
+                src={file.url}
+                style={{
+                  width: 200,
+                  height: 200,
+                }}
+              />
             </AnimationUrl>
           </Content>
         ))}
