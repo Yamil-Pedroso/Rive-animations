@@ -1,10 +1,19 @@
 import AniCardLayout from "../../common/ani-card-layout/AniCardLayout";
 import { ani } from "../../types/Types";
+import { motion } from "framer-motion";
 
 const YoshiEgg = () => {
 
   return (
-    <AniCardLayout style={{ backgroundColor: "#121413" }} title="Yoshi Egg" animationFile={ani[1].animationFile} />
+    <AniCardLayout style={{ backgroundColor: "#121413" }} animationFile={ani[1].animationFile}>
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 6, type: "spring", stiffness: 120 }}
+      >
+        <h3>Yoshi Egg</h3>
+      </motion.div>
+    </AniCardLayout>
   );
 };
 

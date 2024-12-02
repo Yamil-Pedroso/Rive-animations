@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
 interface AniCardLayoutContainerProps {
     bgColor?: string;
@@ -14,7 +15,7 @@ export const AniCardLayoutContainer = styled.div<AniCardLayoutContainerProps>`
     cursor: pointer;
 `;
 
-export const TitleWrapper = styled.div`
+export const TitleWrapper = styled(motion.div)`
     width: 100%;
     display: flex;
     justify-content: space-between;

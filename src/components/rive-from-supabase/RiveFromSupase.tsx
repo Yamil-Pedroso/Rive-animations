@@ -48,7 +48,7 @@ const RiveFromSupabase = ({ isDarkMode }: IRiveFromSupabaseProps) => {
             color: "#435a53",
           }}
         >
-          Galería de Animaciones
+          Animation Gallery from Supabase
         </h1>
       </div>
       <AnimationWrapper style={{ display: "flex", gap: "8rem" }}>

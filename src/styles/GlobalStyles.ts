@@ -26,7 +26,15 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 6rem;
-    margin-top: 8rem;
+    margin-top: 5rem;
+  }
+
+  .local-ani-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 `;

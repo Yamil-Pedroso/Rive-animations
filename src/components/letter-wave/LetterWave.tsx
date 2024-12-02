@@ -2,19 +2,18 @@ import AniCardLayout from "../../common/ani-card-layout/AniCardLayout";
 import { ani } from "../../types/Types";
 import { motion } from "framer-motion";
 
-const SkullOnFire = () => {
-
+const LetterWave = () => {
   return (
-    <AniCardLayout style={{ backgroundColor: "#1a1205" }} animationFile={ani[2].animationFile}>
-      <motion.div
+    <AniCardLayout style={{ backgroundColor: "#050615" }} animationFile={ani[6].animationFile}>
+       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 6, type: "spring", stiffness: 120 }}
       >
-        <h3>Skull On Fire</h3>
+        <h3>Letter Wave</h3>
       </motion.div>
     </AniCardLayout>
-  );
-};
+  )
+}
 
-export default SkullOnFire;
+export default LetterWave

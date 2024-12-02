@@ -5,7 +5,12 @@ export const RiveContainer = styled.div`
 `;
 
 export const AnimationWrapper = styled.div`
+    margin: 0 auto;
+    max-width: 70%;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 8rem;
 `;
 
